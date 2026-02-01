@@ -9,9 +9,9 @@ import TestimonialSection from './components/TestimonialSection.tsx';
 
 const App: React.FC = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden text-slate-900 selection:bg-blue-600 selection:text-white">
+    <div className="relative w-full overflow-x-hidden text-slate-900 selection:bg-blue-600 selection:text-white">
       <AnimatedBackground />
-      
+
       <div className="relative z-10 flex flex-col w-full">
         {/* Section 1: Univad Hero */}
         <section className="flex min-h-screen flex-col items-center justify-center pt-2 pb-8 sm:pt-8 sm:pb-10">
