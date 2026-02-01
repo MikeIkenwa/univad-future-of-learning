@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Univad - Future of Learning</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Babel Standalone -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #ffffff;
+        color: #0f172a;
+        overflow-x: hidden;
+        margin: 0;
+      }
+      
+      /* Serif utility for testimonials */
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+
+      /* Marquee Animation */
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-scroll {
+        animation: scroll 20s linear infinite;
+      }
+
+      /* Grid Background Utility */
+      .bg-grid-slate-100 {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23f1f5f9'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+      }
+
+      /* Times New Roman Font Utility */
+      .font-times {
+        font-family: 'Times New Roman', Times, serif;
+      }
+      
+      /* Loading State Styles */
+      #root:empty::before {
+        content: 'Loading application...';
+        display: block;
+        padding: 40px;
+        color: #64748b;
+        text-align: center;
+        font-size: 14px;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+    </style>
+
+    <!-- FIXED IMPORT MAP: Strictly enforce React 18 and valid JSON -->
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@18.3.1?deps=react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?deps=react@18.3.1",
+    "framer-motion": "https://esm.sh/framer-motion@11.3.24?deps=react@18.3.1,react-dom@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.424.0?deps=react@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <!-- Error Handler for Debugging -->
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        console.error("Global Error:", error);
+        var root = document.getElementById('root');
+        // Only show error on screen if root is empty (app hasn't started)
+        if (root && root.innerHTML === "") {
+             root.innerHTML = '<div style="color:#dc2626; padding:20px; text-align:center; font-family:sans-serif;">' +
+             '<h3>Application Error</h3>' +
+             '<p style="font-size:12px; opacity:0.8;">' + message + '</p>' +
+             '</div>';
+        }
+      };
+    </script>
+
+    <div id="root"></div>
+
+    <!-- Load the main React entry point -->
+    <script type="text/babel" data-presets="env,react" data-type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
